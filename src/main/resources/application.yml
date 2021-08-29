@@ -1,3 +1,8 @@
 micronaut:
   application:
     name: demo
+  executors:
+    scheduled:
+      type: scheduled
+      core-pool-size: 30
+
