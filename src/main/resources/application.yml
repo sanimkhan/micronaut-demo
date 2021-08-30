@@ -1,8 +1,22 @@
 micronaut:
   application:
     name: demo
+  server:
+    port: 8080
   executors:
     scheduled:
       type: scheduled
       core-pool-size: 30
 
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/micronaut_demo
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+flyway:
+  datasources:
+    default:
+      enabled: true
+      locations:
+        - classpath:db/migration
